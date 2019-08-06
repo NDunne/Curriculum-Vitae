@@ -1,58 +1,102 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 \usepackage{cv}
+\usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{enumitem}
+
 \usepackage[margin=0.5in]{geometry}
-\title{Nathan Dunne}
-\author{}
-\date{}
 
-
+\setlist[itemize]{noitemsep}
+\newcommand{\dash}{\item[-]}
 
 \begin{document}
-\maketitle
- \section{intro}
+\hspace*{\fill} 24 Ottways Lane, Ashtead, Surrey, KT21 2NZ \\
+\hspace*{\fill} N.Dunne@warwick.ac.uk | 07473451007
+\section*{Nathan Dunne}
+\vspace{1ex}
+
 I am a student of Computer Science at The University of Warwick, moving into my final year in 2019 having taken an intercalated year to work as a Software Development Intern at Sophos. I consider myself a dedicated and hardworking student, with a positive attitude and a desire to improve that helps me to quickly develop new skills. Currently I am looking for a graduate position for 2020, and hope to find somewhere that will continue to challenge me after university, and allow me to use and expand on the knowledge and skills I have gained over the course of
 my degree.
+ \section*{Results}
+\textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
+\textcolor{darkgray}{University of Warwick} \\
+\hspace{5em} Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
+\\\\
+\textbf{First Year} \hfill \hspace{1em} 1st (72\%) \hfill June 2017 \\    
+\textcolor{darkgray}{University of Warwick} \\
+\hspace{2em} Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)
+\\\\
+\textbf{Advanced Level} \hfill August 2016 \\
+\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\                    
+\hspace{2em} Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]
+\\\\
+\textbf{General Certificate of Secondary Education} \hfill August 2014 \\
+\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\  
+\hspace{2em} 11 GCSEs at A*-B, of which 7 at A* including Mathematics, Additional Mathematics and English Language
  
- \section{Results}
-  \begin{tabularx}{\textwidth}{ X X r }
-Second Year & 1st (72\%) & June 2018 \\
-University of Warwick & & \\
-\multicolumn{3}{l}{\hspace{2em} Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
-\vspace{1ex}
-First Year & 1st (72\%) & June 2017 \\    
-University of Warwick & & \\
-\multicolumn{3}{l}{\hspace{2em} Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
-\vspace{1ex}
-Advanced Level & & August 2016 \\
-The City of London Freemen’s School (CLFS) & & \\                             
-\multicolumn{3}{l}{\hspace{2em} Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]}\\
-\vspace{1ex}
-General Certificate of Secondary Education & & August 2014 \\
-The City of London Freemen’s School (CLFS) & & \\                        
-\multicolumn{3}{l}{\hspace{2em} 11 GCSEs at A*-B, of which 7 at A* including Mathematics, Additional Mathematics and English Language}\\
-  \end{tabularx}
- 
- \section{Employment}
-  \begin{tabularx}{\textwidth}{ X X }
-Software Engineering Intern & June 2019 - August 2019 \\
-ARM Ltd. & \\
-  \end{tabularx}
+ \section*{Employment}
+\textbf{Summer Intern Embedded Software Engineer} \hfill June 2019 - August 2019 \\
+\textcolor{darkgray}{ARM Ltd.}
   \begin{itemize}
-   \item Assigned to the ‘Clamshell’ team to work on optimisation of the chromium web browser.
-   \item Took over an investigation from a graduate into Automatic Feedback Directed Optimisation, and how it could be applied to chromium for performance increase through providing branch information to the compiler.
-   \item This required me to become familiar with building the Linux Kernel, to enable support for hardware tracing, and use an ARM hardware development board for the majority of my work. I also expanded my debugging knowledge with gdb/gdbserver, carrying over what I had learnt at Sophos and expanding on it.
+   \dash Assigned to the ‘Clamshell’ team to work on optimisation of the Chromium web browser.
+   \dash Took over an investigation from a graduate into Automatic Feedback Directed Optimisation, and how it could be applied to chromium for performance increase through providing branch information to the compiler.
+   \dash This required me to become familiar with building the Linux Kernel, to enable support for hardware tracing, and use an ARM hardware development board for the majority of my work. I also expanded my debugging knowledge with gdb/gdbserver, carrying over what I had learnt at Sophos and expanding on it.
+  \end{itemize}
+\textbf{Placement Year Software Engineer} \hfill July 2018 - June 2019 \\
+\textcolor{darkgray}{Sophos Plc.}
+  \begin{itemize}
+   \dash Assigned to the ‘Fasttrack’ team to work as Development for Global Escalations Support.
+   \dash Investigated customer and internal product issues when code analysis or a higher level of technical understanding was needed, requiring me to learn a number of Windows Debugging tools, as well as quickly become familiar with new code bases in .Net, C++ and C for different components.
+   \dash Root causes where identified through live or static debugging, and analysis of logs generated by the product itself as well as troubleshooting tools e.g. Sysinternals, WireShark. In cases where a genuine bug existed I was sometimes able to implement fixes for the team that owned the product.
   \end{itemize}
 
-  \begin{tabularx}{\textwidth}{ X X }
-Software Engineering Intern & July 2018 - June 2019 \\
-Sophos Plc. & \\
-  \end{tabularx}
-  \begin{itemize}
-   \item Assigned to the ‘Fasttrack’ team to work as Development for Global Escalations Support.
-   \item Investigated customer and internal product issues when code analysis or a higher level of technical understanding was needed, requiring me to learn a number of Windows Debugging tools, as well as quickly become familiar with new code bases in .Net, C++ and C for different components.
-   \item Root causes where identified through live or static debugging, and analysis of logs generated by the product itself as well as troubleshooting tools e.g. Sysinternals, WireShark. In cases where a genuine bug existed I was sometimes able to implement fixes for the team that owned the product.
-  \end{itemize}
+  \section*{Technical Skills}
+\hspace*{1in} Programming \hfill C++, Python, C, Java, JavaScript \\
+\hspace*{1in} Scripting \hfill Bash, PowerShell, Lua \\
+\hspace*{1in} Source Control \hspace{1in} Git, Perforce \\
+\hspace*{1in} Operating Systems \hspace{1in} Windows, Linux/UNIX \\
+\hspace*{1in} Productivity \hspace{1in} Visual Studio, Microsoft Office, LibreOffice, LaTeX \\
+\hspace*{1in} Debugging \hspace{1in} gdb, WinDBG, SysInternals, WireShark
+ 
+  \section*{Volunteering}
+\textbf{Project Leader} \hfill October 2016 - June 2018 \\
+\textcolor{darkgray}{Warwick Technology Volunteers}
+   \begin{itemize}
+    \dash Planned, coordinated and lead sessions for school age students aimed at inspiring them to utilise technology creatively rather than simply consuming it. Our sessions involved either Scratch or Arduino as a platform, and usually consisted of assisting the students through a set of resources we’ve created.
+	\dash Also advertised the project to fellow uni students to gain more volunteers and run more sessions, and provided training for the volunteers, to ensure a sufficient level of technical knowledge for them to lead school sessions themselves.
+	\dash This greatly improved my confidence, communication, presentation giving, and teamwork \& leadership skills.
+   \end{itemize}
 
-  \section{Technical Skills}
+  \section*{Awards \& Achievements}
+\textbf{Mount Kilimanjaro} \hfill \hspace{4em} \textcolor{darkgray}{Meningitis Research Foundation} \hfill September 2018 \\
+\hspace*{2em} Raised £3400 in sponsorship over 6 months through charity events, bucket shakes and  donations.
+\vspace{1ex}\\
+\textbf{Three Peaks Challenge} \hfill \textcolor{darkgray}{Meningitis Research Foundation} \hfill July 2017 \\
+\hspace*{2em} Raised £600 in sponsorship over the course of 5 months and completed the challenge over approximately 27 hours.
+\vspace{1ex}\\
+\textbf{Tin Plate alias Wire Workers’ Prize} \hfill \hspace{-17em} \textcolor{darkgray}{CLFS} \hfill July 2016 \\
+\hspace*{2em} Awarded for excellence and contribution to the Computing Department at The City of London Freemen’s School.
+
+  \section*{Interests}
+   \begin{center}
+    \begin{tabularx}{\linewidth}{ X X }
+Rock Climbing & Indoor Rock Climbing and Bouldering \\
+Powerlifting & Warwick Barbell Member 2018 - present \\
+Technical Theatre & Lighting design for productions of Speed Death of the Radiant
+Child, Cabaret; Executive Committee member for Warwick Tech Crew 2017-2018.\\
+Film Production & Producer for Altered Mindset, a Student Film that premiered at 
+the Leatherhead Theatre in September 2016.
+    \end{tabularx}
+   \end{center}
+
+  \section*{References}
+   \begin{center}
+    \begin{tabularx}{5in}{ X X }
+Dr. Matthew Leeke & Dr. Arshad Jhumka \\
+Department of Computer Science & Department of Computer Science \\
+University of Warwick & University of Warwick \\
+Tel: +44 (0) 2476523366 & Tel: +44 (0) 2476573780 \\
+E-mail: matthew.leeke@warwick.ac.uk & E-mail: H.A.Jhumka@warwick.ac.uk 
+    \end{tabularx}
+   \end{center}
 \end{document}
