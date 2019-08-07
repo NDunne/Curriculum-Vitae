@@ -1,4 +1,4 @@
 
-all: cv.tex cv.sty
+all: cv.tex
 	pdflatex cv.tex
 	evince cv.pdf &
