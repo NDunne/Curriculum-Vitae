@@ -1,10 +1,10 @@
 \documentclass[11pt]{article}
-\usepackage{cv}
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{nopageno}
+\usepackage{tikz}
 
 \usepackage[margin=0.5in]{geometry}
 
@@ -12,9 +12,14 @@
 \newcommand{\dash}{\item[-]}
 \newcommand{\linesep}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.2pt}}}
 
+\newcommand{\skillbox}[1]{\def\boxwidth {#1 * 7} \begin{tikzpicture}\draw[fill=darkgray] rectangle (\boxwidth pt, 5pt);\end{tikzpicture}\begin{tikzpicture}\draw[draw=darkgray, fill=white] rectangle (70 - \boxwidth pt, 5pt);\end{tikzpicture}}
+
  \renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{plain}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000 
 
 \titlespacing*{\section}{0pt}{2pt}{3pt}
 \titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
@@ -26,6 +31,7 @@
 \hspace*{\fill} 24 Ottways Lane, Ashtead, Surrey, KT21 2NZ \\
 \hspace*{\fill} N.Dunne@warwick.ac.uk | 07473451007
 \section*{Nathan Dunne}
+
 I am a student of Computer Science at The University of Warwick, moving into my final year in 2019 having taken an intercalated year to work as a Software Development Intern at Sophos. I consider myself a dedicated and hardworking student, with a positive attitude and a desire to improve that helps me to quickly develop new skills. Currently I am looking for a graduate position for 2020, and hope to find somewhere that will continue to challenge me after university, and allow me to use and expand on the knowledge and skills I have gained over the course of my degree.
 
 \linesep
@@ -68,22 +74,33 @@ I am a student of Computer Science at The University of Warwick, moving into my 
   \linesep
 
   \subsection*{Technical Skills}
-   \begin{tabularx}{\linewidth}{X X X}
-Programming & Scripting & Source Control \\
-C++/C & Bash & Git \\
-Python & PowerShell & Perforce \\
-Java & Lua & \\
-JavaScript && \\
-%Programming \hfill C++, Python, C, Java, JavaScript \\
-%Scripting \hfill Bash, PowerShell, Lua \\
-%Source Control \hspace{1in} Git, Perforce \\
-%Operating Systems \hspace{1in} Windows, Linux/UNIX \\
-%Productivity \hspace{1in} Visual Studio, Microsoft Office, LibreOffice, LaTeX \\
-%Debugging \hspace{1in} gdb, WinDBG, SysInternals, WireShark
+   \renewcommand\tabularxcolumn[1]{b{#1}}% for vertical centering text in X column
+
+   \noindent\begin{tabularx}{\linewidth}{X X X X X X}
+\textbf{Programming} & \textbf{Scripting} & \textbf{Source Control} & \textbf{Operating Systems} & \textbf{Productivity} & \textbf{Debugging} \\[10pt]
+C++/C & Bash & Git & Windows & Visual Studio & gdb \\[1pt]
+\skillbox{7} & \skillbox{8} & \skillbox{7} & \skillbox{7} & \skillbox{7} & \skillbox{6} \\[6pt]
+Python & PowerShell & Perforce & Linux/UNIX & Microsoft Office & WinDBG \\
+\skillbox{8} & \skillbox{8} & \skillbox{4} &  \skillbox{8} & \skillbox{9} & \skillbox{6} \\[6pt]
+Java & Lua & & & LibreOffice & SysInternals \\
+\skillbox{7} & \skillbox{7} & & & \skillbox{9} & \skillbox{7} \\[6pt]
+JavaScript & & & & LateX/BibTeX & WireShark \\
+\skillbox{5} & & & & \skillbox{8} & \skillbox{5} \\[6pt]
    \end{tabularx}
-   \begin{tabularx}{\linewidth}{X X X}
-   Operating Systems & Productivity & Debugging
-   \end{tabularx}
+
+%    \vspace{10pt}
+%    \noindent
+%    \begin{tabularx}{\linewidth}{X X X}
+
+% Windows & Visual Studio & gdb \\
+% \skillbox{6} & \skillbox{8} & \skillbox{6} \\\\
+% Linux/UNIX & Microsoft Office & WinDBG \\
+% \skillbox{6} & \skillbox{8} & \skillbox{6} \\\\
+% & LibreOffice & Windows SysInternals \\
+% & \skillbox{8} & \skillbox{6} \\\\
+% & LateX/BibTeX & WireShark \\
+% & \skillbox{8} & \skillbox{6} \\\\
+%    \end{tabularx}
   \linesep
 
   \subsection*{Volunteering}
@@ -97,33 +114,24 @@ JavaScript && \\
 
   \linesep
 
-  \subsection*{Awards \& Achievements}
-\textbf{Mount Kilimanjaro} \hfill \hspace{4em} \textcolor{darkgray}{Meningitis Research Foundation} \hfill September 2018 \\
-\hspace*{2em} Raised £3400 in sponsorship over 6 months through charity events, bucket shakes and  donations.
-\vspace{1ex}\\
-\textbf{Three Peaks Challenge} \hfill \textcolor{darkgray}{Meningitis Research Foundation} \hfill July 2017 \\
-\hspace*{2em} Raised £600 in sponsorship over the course of 5 months and completed the challenge over 27 hours.
-\vspace{1ex}\\
-\textbf{Tin Plate alias Wire Workers’ Prize} \hfill \hspace{-17em} \textcolor{darkgray}{CLFS} \hfill July 2016 \\
-\hspace*{2em} Awarded for excellence and contribution to the Computing Department.
-
-  \linesep
-
   \subsection*{Interests}
-   \begin{center}
-    \begin{tabularx}{\linewidth}{ X X }
-Rock Climbing & Indoor Rock Climbing and Bouldering \\
-Powerlifting & Warwick Barbell Member 2018 - present \\
-Technical Theatre & Lighting design for productions of Speed Death of the Radiant
-Child, Cabaret; Executive Committee member for Warwick Tech Crew 2017-2018.\\
-Film Production & Producer for Altered Mindset, a Student Film that premiered at 
-the Leatherhead Theatre in September 2016.
-    \end{tabularx}
-   \end{center}
+  \begin{itemize}
+\dash \textbf{Rock Climbing} \\ Indoor Rock Climbing and Bouldering 
+\dash \textbf{Charity Fundraising} (Warwick RAG)
+   \begin{itemize}[topsep=3pt, itemsep=2pt, partopsep=0pt, parsep=0pt]
+    \item[] 3 Peaks challenge: \hfill $>$\textsterling 600 for \textit{The Meningitis Research Foundation}
+    \item[] Mount Kilimanjaro: \hfill$>$\textsterling 3000 for \textit{The Meningitis Research Foundation}
+    \item[] Skydive: \hfill $>$\textsterling 400 for \textit{Alziemers Research UK}
+   \end{itemize}
+\dash \textbf{Powerlifting} \\ \indent Warwick Barbell Member 2018 - present 
+\dash \textbf{Technical Theatre} \\ \indent Lighting design for productions of \textit{Speed Death of the Radiant
+Child}, \textit{Cabaret}; \\ Executive Committee member for Warwick Tech Crew 2017-2018.
+  \end{itemize}
 
   \linesep
 
 \titlespacing*{\subsection}{5pt}{2pt}{3pt}
+\renewcommand{\arraystretch}{0.8}
 
    \subsection*{References}
      \begin{tabularx}{\linewidth}{ l X r }
