@@ -39,6 +39,32 @@ I am a student of Computer Science at The University of Warwick, moving into my 
 \linesep
 \subsection*{Results}
 
+\newcommand\result[5]{\node[commit] (#1) {}; \node[clabel] at (#1) {
+  #1 \hspace{2in} #2 \hspace{2in} #3\\
+  \textcolor{darkgray}{#4}\\
+  \hspace*{4ex}#5
+};}
+
+\newcommand\ghost[1]{\coordinate (#1);}
+\newcommand\connect[2]{\path (#1) to[out=90,in=-90] (#2);}
+
+\begin{tikzpicture}
+
+\tikzstyle{commit}=[draw,circle,fill=white,inner sep=0pt,minimum size=10pt]
+\tikzstyle{clabel}=[right,outer sep=1em,align=left]
+\tikzstyle{every path}=[draw]
+
+\matrix [column sep={1em,between origins},row sep=\lineskip]
+{
+  \ghost{uni2} & \result{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
+  \ghost{uni1} & \result{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+};
+
+\connect{uni1}{uni2};
+\connect{First Year}{Second Year};
+
+\end{tikzpicture}
+
 \textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
 \textcolor{darkgray}{University of Warwick} \\
 \hspace*{4ex}Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
