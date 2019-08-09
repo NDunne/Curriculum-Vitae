@@ -37,13 +37,15 @@
 I am a student of Computer Science at The University of Warwick, moving into my final year in 2019 having taken an intercalated year to work as a Software Development Intern at Sophos. I consider myself a dedicated and hardworking student, with a positive attitude and a desire to improve that helps me to quickly develop new skills. Currently I am looking for a graduate position for 2020, and hope to find somewhere that will continue to challenge me after university, and allow me to use and expand on the knowledge and skills I have gained over the course of my degree.
 
 \linesep
-\subsection*{Results}
+\subsection*{Education}
 
-\newcommand\result[6]{\node[commit] (#1) {}; \node[clabel] at (#1) {
-  #2 \hspace{2in} #3 \hspace{2in} #4\\
-  \textcolor{darkgray}{#5}\\
-  \hspace*{4ex}#6
-};}
+\newcommand\result[6]{\node[commit] (#1) {}; 
+  \node[llabel] at (#1) {#2};
+  \node[rlabel] at (#1) {#4};
+}
+%   \textcolor{darkgray}{#5}\\
+%   \hspace*{4ex}#6
+% };}
 
 \newcommand\ghost[1]{\coordinate (#1);}
 \newcommand\connect[2]{\path (#1) to[out=90,in=-90] (#2);}
@@ -51,7 +53,8 @@ I am a student of Computer Science at The University of Warwick, moving into my 
 \begin{tikzpicture}
 
 \tikzstyle{commit}=[draw,circle,fill=white,inner sep=0pt,minimum size=10pt]
-\tikzstyle{clabel}=[right,outer sep=1em,align=left]
+\tikzstyle{llabel}=[right,outer sep=1em,align=left]
+\tikzstyle{rlabel}=[right,outer sep=0pt,align=right, text width=\hsize-1em]
 \tikzstyle{every path}=[draw]
 
 \matrix [column sep={1em,between origins},row sep=\lineskip]
