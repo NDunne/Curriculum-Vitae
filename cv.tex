@@ -39,10 +39,10 @@ I am a student of Computer Science at The University of Warwick, moving into my 
 \linesep
 \subsection*{Results}
 
-\newcommand\result[5]{\node[commit] (#1) {}; \node[clabel] at (#1) {
-  #1 \hspace{2in} #2 \hspace{2in} #3\\
-  \textcolor{darkgray}{#4}\\
-  \hspace*{4ex}#5
+\newcommand\result[6]{\node[commit] (#1) {}; \node[clabel] at (#1) {
+  #2 \hspace{2in} #3 \hspace{2in} #4\\
+  \textcolor{darkgray}{#5}\\
+  \hspace*{4ex}#6
 };}
 
 \newcommand\ghost[1]{\coordinate (#1);}
@@ -56,31 +56,22 @@ I am a student of Computer Science at The University of Warwick, moving into my 
 
 \matrix [column sep={1em,between origins},row sep=\lineskip]
 {
-  \ghost{uni2} & \result{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
-  \ghost{uni1} & \result{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+  \ghost{uni3} & \\
+  \ghost{uni2} & \result{2ndYr}{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
+  \ghost{uni1} & \result{1stYr}{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+  \result{AL}{Advanced Level}{}{August 2016}{The City of London Freemen’s School (CLFS)}{Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]} & \\
+  \result{GCSE}{General Certificate of Secondary Education}{}{August 2014}{The City of London Freemen’s School (CLFS)}{11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language} & \\
 };
 
+\connect{uni2}{uni3};
 \connect{uni1}{uni2};
-\connect{First Year}{Second Year};
+\connect{1stYr}{2ndYr};
+\connect{AL}{uni1};
+\connect{AL}{1stYr};
+\connect{GCSE}{AL}
 
 \end{tikzpicture}
 
-\textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
-\textcolor{darkgray}{University of Warwick} \\
-\hspace*{4ex}Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
-\\\\
-\textbf{First Year} \hfill \hspace{1em} 1st (72\%) \hfill June 2017 \\    
-\textcolor{darkgray}{University of Warwick} \\
-\hspace*{4ex}Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)
-\\\\
-\textbf{Advanced Level} \hfill August 2016 \\
-\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\                    
-\hspace*{4ex}Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]
-\\\\
-\textbf{General Certificate of Secondary Education} \hfill August 2014 \\
-\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\  
-\hspace*{4ex}11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language
-\\
  \linesep
  \subsection*{Employment}
 \textbf{Summer Intern Embedded Software Engineer} \hfill June 2019 - August 2019 \\
