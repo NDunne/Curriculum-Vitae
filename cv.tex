@@ -39,22 +39,64 @@ I am a student of Computer Science at The University of Warwick moving into my f
 \linesep
 \subsection*{Education}
 
-\textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
-\textcolor{darkgray}{University of Warwick} \\
-\hspace*{4ex}Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
-\\\\
-\textbf{First Year} \hfill \hspace{1em} 1st (72\%) \hfill June 2017 \\    
-\textcolor{darkgray}{University of Warwick} \\
-\hspace*{4ex}Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)
-\\\\
-\textbf{Advanced Level} \hfill August 2016 \\
-\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\                    
-\hspace*{4ex}Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]
-\\\\
-\textbf{General Certificate of Secondary Education} \hfill August 2014 \\
-\textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\  
-\hspace*{4ex}11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language
-\\
+%% OLD FORMAT %%
+% \textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
+% \textcolor{darkgray}{University of Warwick} \\
+% \hspace*{4ex}Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
+% \\\\
+% \textbf{First Year} \hfill \hspace{1em} 1st (72\%) \hfill June 2017 \\    
+% \textcolor{darkgray}{University of Warwick} \\
+% \hspace*{4ex}Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)
+% \\\\
+% \textbf{Advanced Level} \hfill August 2016 \\
+% \textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\                    
+% \hspace*{4ex}Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]
+% \\\\
+% \textbf{General Certificate of Secondary Education} \hfill August 2014 \\
+% \textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\  
+% \hspace*{4ex}11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language
+% \\
+
+\newcommand\result[7]{\node[commit] (#1) {}; 
+  \node[llabel] at (#1) {
+  #3\\
+  \textcolor{darkgray}{#6}\\
+  \hspace*{4ex}#7
+  };
+  \node[rlabel, text width=\textwidth-#2em] at (#1) {#5};
+}
+
+\newcommand\ghost[1]{\coordinate (#1);}
+\newcommand\connect[2]{\path (#1) to[out=90,in=-90] (#2);}
+
+\begin{tikzpicture}
+
+\tikzstyle{commit}=[draw,circle,fill=white,inner sep=0pt,minimum size=10pt]
+\tikzstyle{llabel}=[right,outer sep=1em,align=left]
+\tikzstyle{rlabel}=[right,outer sep=0pt,align=right, at start]
+\tikzstyle{every path}=[draw]
+
+\matrix [column sep={1em,between origins},row sep=7pt]
+{
+  \ghost{uni3} & \ghost{post}\\
+  \ghost{uni2} & \result{2ndYr}{2}{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
+  \ghost{uni1} & \result{1stYr}{2}{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+  \result{AL}{1}{Advanced Level}{}{August 2016}{The City of London Freemen’s School (CLFS)}{Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]} & \\
+  \result{GCSE}{1}{General Certificate of Secondary Education}{}{August 2014}{The City of London Freemen’s School (CLFS)}{11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language} & \\
+  \ghost{pre} & \\
+};
+
+\connect{uni2}{uni3};
+\connect{uni1}{uni2};
+\connect{2ndYr}{post};
+\connect{1stYr}{2ndYr};
+\connect{AL}{uni1};
+\connect{AL}{1stYr};
+\connect{GCSE}{AL}
+\connect{pre}{GCSE}
+
+\end{tikzpicture}
+
  \linesep
  \subsection*{Employment}
 \textbf{Summer Intern Embedded Software Engineer} \hfill June 2019 - August 2019 \\
@@ -62,14 +104,14 @@ I am a student of Computer Science at The University of Warwick moving into my f
   \begin{itemize}
    \dash Assigned to the ‘Clamshell’ team to work on optimisation of the Chromium web browser.
    \dash Took over an investigation from a graduate into Automatic Feedback Directed Optimisation, and how it could be applied to chromium for performance increase through providing branch information to the compiler.
-   \dash This required me to become familiar with building the Linux Kernel, to enable support for hardware tracing, and use an ARM hardware development board for the majority of my work. I also expanded my debugging knowledge with gdb/gdbserver, carrying over what I had learnt at Sophos and expanding on it.
+   \dash This required me to become familiar with building the Linux Kernel, gain a deeper understanding of benchmarking the performance of software, and use an ARM hardware development board for the majority of my work. I also expanded my debugging knowledge with gdb/gdbserver, carrying over what I had learnt at Sophos and expanding on it.
   \end{itemize}
 \vspace{10pt}
 \textbf{Placement Year Software Engineer} \hfill July 2018 - June 2019 \\
 \textcolor{darkgray}{Sophos Plc.}
   \begin{itemize}
    \dash Assigned to the ‘Fasttrack’ team to work as Development for Global Escalations Support.
-   \dash Investigated customer and internal product issues when code analysis or a higher level of technical understanding was needed, requiring me to learn a number of Windows Debugging tools, as well as quickly become familiar with new code bases in .Net, C++ and C for different components.
+   \dash Investigated customer and internal product issues when code analysis or a higher level of technical understanding was needed, requiring me to learn a number of debugging tools, as well as quickly become familiar with new code bases in .Net, C++ and C for different components.
    \dash Root causes where identified through live or static debugging, and analysis of logs generated by the product itself as well as troubleshooting tools e.g. Sysinternals, WireShark. In cases where a genuine bug existed I was sometimes able to implement fixes for the team that owned the product.
   \end{itemize}
 
@@ -90,6 +132,7 @@ JavaScript & & & & LateX/BibTeX & WireShark \\
 \skillbox{5} & & & & \skillbox{8} & \skillbox{5} \\[6pt]
    \end{tabularx}
 
+%% OLD FORMAT %%
 %    \vspace{10pt}
 %    \noindent
 %    \begin{tabularx}{\linewidth}{X X X}
