@@ -1,4 +1,6 @@
 
+VIEWER = epdfview # evince
+
 all: cv.tex
 	pdflatex cv.tex
-	evince cv.pdf &
+	$(VIEWER) cv.pdf &
