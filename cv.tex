@@ -78,7 +78,10 @@ I am a student of Computer Science at The University of Warwick moving into my f
 
 \matrix [column sep={1em,between origins},row sep=7pt]
 {
-  \ghost{uni3} & \ghost{post}\\
+  \ghost{post} & \\
+  \result{grad}{2}{Graduate: First Class}{1st (72\%)}{July 2020}{University of Warwick}{Dissertation: Just-In-Time Compilation for an Unstructed Mesh DSL (77\%)} & \\
+  \ghost{uni3} & \result{3rdYr}{2}{Third Year}{1st (73\%)}{June 2020}{University of Warwick}{Compiler Design (81\%), Fault-Tolerabt Systems (77\%), Computer Graphics (75\%)}\\
+  \ghost{uni2.5} & \result{int}{2}{Intercalated Year}{}{2019}{Sophos Ltd \& Arm Ltd}{}\\
   \ghost{uni2} & \result{2ndYr}{2}{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
   \ghost{uni1} & \result{1stYr}{2}{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
   \result{AL}{1}{Advanced Level}{}{August 2016}{The City of London Freemen’s School (CLFS)}{Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]} & \\
@@ -86,9 +89,14 @@ I am a student of Computer Science at The University of Warwick moving into my f
   \ghost{pre} & \\
 };
 
-\connect{uni2}{uni3};
+\connect{grad}{post}
+\connect{3rdYr}{grad}
+\connect{uni3}{grad}
+\connect{uni2}{uni2.5};
+\connect{uni2.5}{uni3};
 \connect{uni1}{uni2};
-\connect{2ndYr}{post};
+\connect{int}{3rdYr};
+\connect{2ndYr}{int};
 \connect{1stYr}{2ndYr};
 \connect{AL}{uni1};
 \connect{AL}{1stYr};
