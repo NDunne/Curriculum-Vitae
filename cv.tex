@@ -34,7 +34,7 @@
 \hspace*{\fill} N.Dunne@warwick.ac.uk | 07473451007
 \section*{Nathan Dunne}
 
-I am a student of Computer Science at The University of Warwick moving into my final year in 2019, having taken an intercalated year to work as a Software Development Intern at Sophos. I consider myself a dedicated and hardworking student, with a positive attitude and a desire to improve that helps me to quickly develop new skills. Currently I am looking for a graduate position for 2020, and hope to find somewhere that will continue to challenge me after university, and allow me to use and expand on the knowledge and skills I have gained over the course of my degree.
+I am a graduate of Computer Science from The University of Warwick, finishing my final year in 2020. I took an intercalated year to work as a Software Development Intern at Sophos, and as an Embedded Software Engineer at Arm. I consider myself a dedicated and hardworking proffesional, with a positive attitude and a desire to improve that helps me to quickly develop new skills. I hope to find somewhere that will continue to challenge me, and allow me to use and expand on the knowledge and skills I have gained so far.
 
 \linesep
 \subsection*{Education}
@@ -66,6 +66,13 @@ I am a student of Computer Science at The University of Warwick moving into my f
   \node[rlabel, text width=\textwidth-#2em] at (#1) {#5};
 }
 
+\newcommand\subresult[6]{\node[commit] (#1) {}; 
+  \node[llabel] at (#1) {
+  #3\\
+  \hspace*{4ex}#6
+  };
+  \node[rlabel, text width=\textwidth-#2em] at (#1) {#5};
+}
 \newcommand\ghost[1]{\coordinate (#1);}
 \newcommand\connect[2]{\path (#1) to[out=90,in=-90] (#2);}
 
@@ -79,11 +86,11 @@ I am a student of Computer Science at The University of Warwick moving into my f
 \matrix [column sep={1em,between origins},row sep=7pt]
 {
   \ghost{post} & \\
-  \result{grad}{2}{Graduate: First Class}{1st (72\%)}{July 2020}{University of Warwick}{Dissertation: Just-In-Time Compilation for an Unstructed Mesh DSL (77\%)} & \\
-  \ghost{uni3} & \result{3rdYr}{2}{Third Year}{1st (73\%)}{June 2020}{University of Warwick}{Compiler Design (81\%), Fault-Tolerabt Systems (77\%), Computer Graphics (75\%)}\\
-  \ghost{uni2.5} & \result{int}{2}{Intercalated Year}{}{2019}{Sophos Ltd \& Arm Ltd}{}\\
-  \ghost{uni2} & \result{2ndYr}{2}{Second Year}{1st (72\%)}{June 2018}{University of Warwick}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
-  \ghost{uni1} & \result{1stYr}{2}{First Year}{1st (72\%)}{June 2017}{University of Warwick}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+  \result{grad}{2}{Computer Science with Intercalated Year Graduate: First Class}{1st (72\%)}{July 2020}{University of Warwick}{Dissertation: Just-In-Time Compilation for an Unstructed Mesh DSL (77\%)} & \\
+  \ghost{uni3} & \subresult{3rdYr}{2}{Third Year}{1st (73\%)}{2020}{Compiler Design (81\%), Fault-Tolerant Systems (77\%), Computer Graphics (75\%)}\\
+  \ghost{uni2.5} & \subresult{int}{2}{Intercalated Year}{}{2019}{Sophos Ltd (11 months) \& Arm Ltd (3 months}{}\\
+  \ghost{uni2} & \subresult{2ndYr}{2}{Second Year}{1st (72\%)}{2018}{Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
+  \ghost{uni1} & \subresult{1stYr}{2}{First Year}{1st (72\%)}{2017}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
   \result{AL}{1}{Advanced Level}{}{August 2016}{The City of London Freemen’s School (CLFS)}{Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]} & \\
   \result{GCSE}{1}{General Certificate of Secondary Education}{}{August 2014}{The City of London Freemen’s School (CLFS)}{11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language} & \\
   \ghost{pre} & \\
