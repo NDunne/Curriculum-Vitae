@@ -1,5 +1,6 @@
 
-VIEWER = epdfview # evince
+#VIEWER = epdfview
+VIEWER = evince
 
 all: cv.tex
 	pdflatex cv.tex
