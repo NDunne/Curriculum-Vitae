@@ -30,32 +30,14 @@
 %Curriculum Vitae
 
 \begin{document}
-\hspace*{\fill} 24 Ottways Lane, Ashtead, Surrey, KT21 2NZ \\
-\hspace*{\fill} N.Dunne@warwick.ac.uk | 07473451007
+\hspace*{\fill} Flat 2, 129 Kings Cross Road, London, WC1X 9BJ \\
+\hspace*{\fill} 24NDunne24@gmail.com | (+44) 07473451007
 \section*{Nathan Dunne}
 
-I am a graduate of Computer Science from The University of Warwick, finishing in 2020. During my course I took an intercalated year to work as an Intern at Sophos Ltd, and at Arm Ltd. I consider myself a dedicated and hardworking proffesional, with a positive attitude and a desire to improve that helps me to quickly develop new skills.
+I am a graduate of Computer Science from The University of Warwick, finishing in 2020. During my course I took an intercalated year to work as an Intern at Sophos Ltd, and at Arm Ltd. Since graduating I have been working in the Open Source Software division of Arm Ltd. 
 
 \linesep
 \subsection*{Education}
-
-%% OLD FORMAT %%
-% \textbf{Second Year} \hfill 1st (72\%) \hfill June 2018 \\
-% \textcolor{darkgray}{University of Warwick} \\
-% \hspace*{4ex}Database Systems (81\%) Software Engineering (79\%), Adv. Computer Architecture (78\%)
-% \\\\
-% \textbf{First Year} \hfill \hspace{1em} 1st (72\%) \hfill June 2017 \\    
-% \textcolor{darkgray}{University of Warwick} \\
-% \hspace*{4ex}Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)
-% \\\\
-% \textbf{Advanced Level} \hfill August 2016 \\
-% \textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\                    
-% \hspace*{4ex}Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]
-% \\\\
-% \textbf{General Certificate of Secondary Education} \hfill August 2014 \\
-% \textcolor{darkgray}{The City of London Freemen’s School (CLFS)} \\  
-% \hspace*{4ex}11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language
-% \\
 
 \newcommand\result[7]{\node[commit] (#1) {}; 
   \node[llabel] at (#1) {
@@ -86,11 +68,9 @@ I am a graduate of Computer Science from The University of Warwick, finishing in
 \matrix [column sep={1em,between origins},row sep=7pt]
 {
   \ghost{post} & \\
-  \result{grad}{1}{Computer Science with Intercalated Year: First Class}{1st (72\%)}{July 2020}{University of Warwick}{Dissertation: Just-In-Time Compilation for an Unstructed Mesh DSL (77\%)} & \\
-  \ghost{uni3} & \subresult{3rdYr}{2}{Third Year}{1st (73\%)}{2020}{Compiler Design (81\%), Fault-Tolerant Systems (77\%), Computer Graphics (75\%)}\\
-  \ghost{uni2.5} & \subresult{int}{2}{Intercalated Year}{}{2019}{Sophos Ltd (11 months) \& Arm Ltd (3 months}{}\\
-  \ghost{uni2} & \subresult{2ndYr}{2}{Second Year}{1st (72\%)}{2018}{Database Systems (81\%), Software Engineering (79\%), Adv. Computer Architecture (78\%)}\\
-  \ghost{uni1} & \subresult{1stYr}{2}{First Year}{1st (72\%)}{2017}{Discrete Maths (85\%), Design of Information Structures (76\%), Intro to Java (72\%)}\\
+  \result{grad}{1}{Computer Science with Intercalated Year: First Class}{}{July 2020}{University of Warwick}{Dissertation: Just-In-Time Compilation for an Unstructed Mesh DSL} & \\
+  \ghost{uni3} & \subresult{3rdYr}{2}{Third Year Electives:}{}{2020}{Compiler Design, Fault-Tolerant Systems, Computer Graphics}\\
+  \ghost{uni2h} & \subresult{int}{2}{Intercalated Year:}{}{2019}{Sophos Ltd (11 months) \& Arm Ltd (3 months)}{}\\
   \result{AL}{1}{Advanced Level}{}{August 2016}{The City of London Freemen’s School (CLFS)}{Maths (A*), Computing (A), Physics (A), Electronics (A) [Advanced Subsidiary]} & \\
   \result{GCSE}{1}{General Certificate of Secondary Education}{}{August 2014}{The City of London Freemen’s School (CLFS)}{11 GCSEs A*-B, 7 at A* including Mathematics, Additional Mathematics and English Language} & \\
   \ghost{pre} & \\
@@ -99,14 +79,9 @@ I am a graduate of Computer Science from The University of Warwick, finishing in
 \connect{grad}{post}
 \connect{3rdYr}{grad}
 \connect{uni3}{grad}
-\connect{uni2}{uni2.5};
-\connect{uni2.5}{uni3};
-\connect{uni1}{uni2};
+\connect{uni2h}{uni3};
 \connect{int}{3rdYr};
-\connect{2ndYr}{int};
-\connect{1stYr}{2ndYr};
-\connect{AL}{uni1};
-\connect{AL}{1stYr};
+\connect{AL}{uni2h};
 \connect{GCSE}{AL}
 \connect{pre}{GCSE}
 
@@ -114,17 +89,24 @@ I am a graduate of Computer Science from The University of Warwick, finishing in
 
  \linesep
  \subsection*{Employment}
+\textbf{Graduate Open Source Software Engineer} \hfill August 2020 - Present \\
+\textcolor{darkgray}{ARM Ltd.}
+  \begin{itemize}
+   \dash Rotated between several teams in Open Source Software, for 8 month periods. 
+   \dash Projects included: \\ -  Optimising linear algebra routines in C++ and aarch64 assembly for high-performance maths libraries
+\\ -  Generating bootable images for automotive with Yocto
+\\ -  Working on an LLVM compiler for an upcoming ARM hardware platform.
+  \end{itemize}
+\vspace{10pt}
 \textbf{Summer Intern Embedded Software Engineer} \hfill June 2019 - August 2019 \\
 \textcolor{darkgray}{ARM Ltd.}
   \begin{itemize}
-   \dash Assigned to the ‘Clamshell’ team to work on optimisation of the Chromium web browser.
-   \dash Took over an investigation from a graduate into a Google framework that could allow greater performance for the chromium binary based on its branching patterns.
+   \dash Took over an investigation from a graduate into a Google framework that resulted in greater performance for Chromium users on ARM platforms based on branching patterns.
   \end{itemize}
 \vspace{10pt}
 \textbf{Placement Year Software Engineer} \hfill July 2018 - June 2019 \\
 \textcolor{darkgray}{Sophos Plc.}
   \begin{itemize}
-   \dash Assigned to the ‘Fasttrack’ team to work as Development for Global Escalations Support.
    \dash Investigated customer and internal product issues when code analysis or a higher level of technical understanding was needed, requiring me to learn a number of debugging tools, as well as quickly become familiar with new code bases in .Net, C++ and C for different components.
   \end{itemize}
 
@@ -136,29 +118,15 @@ I am a graduate of Computer Science from The University of Warwick, finishing in
    \noindent\begin{tabularx}{\linewidth}{X X X X X X}
 \textbf{Programming} & \textbf{Scripting} & \textbf{Source Control} & \textbf{Operating Systems} & \textbf{Productivity} & \textbf{Debugging} \\[10pt]
 C++/C        & Python       & Git          & Linux/UNIX    & Visual Studio    & gdb\\[1pt]
-\skillbox{7} & \skillbox{8} & \skillbox{7} & \skillbox{8}  & \skillbox{6}     & \skillbox{6}\\[6pt]
+\skillbox{8} & \skillbox{8} & \skillbox{8} & \skillbox{8}  & \skillbox{6}     & \skillbox{6}\\[6pt]
 Java         & Bash         & Perforce     & Windows       & Microsoft Office & WinDBG \\
-\skillbox{6} & \skillbox{8} & \skillbox{3} & \skillbox{7}  & \skillbox{8}     & \skillbox{5}\\[6pt]
+\skillbox{5} & \skillbox{8} & \skillbox{2} & \skillbox{7}  & \skillbox{8}     & \skillbox{5}\\[6pt]
 JavaScript   & PowerShell   &              &               & LibreOffice      & SysInternals \\
 \skillbox{4} & \skillbox{7} &              &               & \skillbox{8}     & \skillbox{6}\\[6pt]
 Ada          & Lua          &              &               & LateX/BibTeX     & WireShark \\
-\skillbox{3} & \skillbox{6} &              &               & \skillbox{6}     & \skillbox{4}\\[6pt]
+\skillbox{2} & \skillbox{6} &              &               & \skillbox{6}     & \skillbox{4}\\[6pt]
    \end{tabularx}
 
-%% OLD FORMAT %%
-%    \vspace{10pt}
-%    \noindent
-%    \begin{tabularx}{\linewidth}{X X X}
-
-% Windows & Visual Studio & gdb \\
-% \skillbox{6} & \skillbox{8} & \skillbox{6} \\\\
-% Linux/UNIX & Microsoft Office & WinDBG \\
-% \skillbox{6} & \skillbox{8} & \skillbox{6} \\\\
-% & LibreOffice & Windows SysInternals \\
-% & \skillbox{8} & \skillbox{6} \\\\
-% & LateX/BibTeX & WireShark \\
-% & \skillbox{8} & \skillbox{6} \\\\
-%    \end{tabularx}
   \linesep
 
   \subsection*{Volunteering}

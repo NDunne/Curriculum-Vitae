@@ -1,7 +1,8 @@
 
 #VIEWER = epdfview
-VIEWER = evince
+VIEWER = open
+OUTFILE = NathanDunneCV
 
 all: cv.tex
-	pdflatex cv.tex
-	$(VIEWER) cv.pdf &
+	pdflatex -jobname $(OUTFILE) cv.tex
+	$(VIEWER) $(OUTFILE).pdf &
